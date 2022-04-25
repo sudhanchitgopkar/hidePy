@@ -65,7 +65,8 @@ def decode(imgPath):
     except FileNotFoundError:
         print("✖ File not found!")
         return("")
-    
+
+    f = open("decoded.txt", "w")
     px = list(im.getdata())
     txtbin = ""
     txt = ""
@@ -79,6 +80,7 @@ def decode(imgPath):
     for i in range(8,len(txtbin),8):
         txt += chr(int(txtbin[i-8:i], 2))
         if i >= 24 and txt[-3:] == "$%$":
+            f.write(txt[:-3])
             return (txt[:-3])
 
     return("No message found.")
@@ -109,6 +111,7 @@ def main():
             imgPath = input("Please enter a path to your image file\nuser@hidepy $ ")
             if(decode(imgPath) != ""):
                 print("\n✓ Secret Message: " + decode(imgPath))
+                
         elif cmd != 'q':
             print("Input not recognized!\n")
 
