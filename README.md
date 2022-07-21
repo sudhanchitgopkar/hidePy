@@ -1,5 +1,5 @@
 <h1 align="center"><b>HidePy</b></h1>
-<p align="center"><b>A minimal LSB steganography tool written in python for single bit encoding/decoding.</b></p>
+<p align="center"><b>A simple LSB steganography tool written in python for single bit encoding/decoding.</b></p>
 </br>
 
 **Setup/Install:**
