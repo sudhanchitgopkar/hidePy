@@ -46,7 +46,6 @@ Welcome to:
 
 A steganography tool written in Python!
 
-
 Select an option:
 e: encode image
 d: decode image
